@@ -11,12 +11,20 @@ Restaurant.destroy_all
 
 puts 'Creating restaurants...'
 5.times do
-  Restaurant.create(
+  new_restaurant = Restaurant.create(
     name: Faker::Company.name,
     address: Faker::Address.full_address,
     phone_number: Faker::Company.duns_number,
     category: %w(chinese italian japanese french belgian).sample
   )
+  Random.rand(5..10).times do
+    new_review = Review.new(
+      content: Faker::Lorem.paragraph(sentence_count: Random.rand(8..10), supplemental: true, random_sentences_to_add: 5),
+      rating: (0..5).to_a.sample
+    )
+    new_review.restaurant = new_restaurant
+    new_review.save
+  end
 end
 
 puts 'Finished!'

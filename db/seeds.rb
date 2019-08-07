@@ -19,6 +19,7 @@ puts 'Creating restaurants...'
   )
   Random.rand(5..10).times do
     new_review = Review.new(
+      customer_name: Faker::Name.name,
       content: Faker::Lorem.paragraph(sentence_count: Random.rand(8..10), supplemental: true, random_sentences_to_add: 5),
       rating: (0..5).to_a.sample
     )

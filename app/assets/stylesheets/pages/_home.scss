@@ -1,7 +1,4 @@
-// Place all the styles related to the restaurants controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
+// Specific CSS for your home-page
 body {
   margin: 0;
 }
@@ -27,18 +24,12 @@ li {
   margin: 0 300px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .link {
-  text-decoration: none;
   color: blue;
 }
 
 .link:hover {
+  text-decoration: none;
   color: red;
 }
 

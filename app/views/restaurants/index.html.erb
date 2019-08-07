@@ -8,9 +8,11 @@
     <div class="col-12 col-lg-4">
       <div class="card my-3">
         <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
-        <div class="card-header"><%= restaurant.name %></div>
+        <div class="card-header restaurant-name d-flex align-items-center">
+          <p><%= restaurant.name %></p>
+        </div>
         <div class="card-body">
-          <p class="card-text"><%= restaurant.address %></p>
+          <p class="card-text restaurant-address"><%= restaurant.address %></p>
           <%= link_to "Learn more", restaurant_path(restaurant), class: "link" %>
         </div>
       </div>

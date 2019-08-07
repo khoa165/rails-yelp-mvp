@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .review-footer {
   opacity: 0.5;
+  background: #ecfcff;
 }
 
 .restaurant-name {
@@ -63,4 +64,22 @@ hr {
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.review-content {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.card-body {
+  background: rgb(230, 230, 230);
+}
+
+.card-header.restaurant-name {
+  height: 70px;
+  font-size: 16px;
+}
+
+.restaurant-address {
+  height: 100px;
 }

@@ -6,6 +6,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @reviews = Review.where(restaurant: @restaurant)
   end
 
   def new
@@ -24,6 +25,6 @@ class RestaurantsController < ApplicationController
   end
 
   def find_restaurant
-    @restaurant = Restaurant.find(params[:id].to_i)
+    @restaurant = Restaurant.find(params[:id])
   end
 end

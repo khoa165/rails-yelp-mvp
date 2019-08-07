@@ -1,12 +1,20 @@
-<div class="container">
+<div class="main">
   <h1>Restaurants</h1>
-  <ul>
-    <% @restaurants.each do |restaurant| %>
-      <li>
-        <%= link_to restaurant.name, restaurant_path(restaurant), class: "link" %>
-      </li>
-    <% end %>
-  </ul>
+
+    <div class="row">
+      <% @restaurants.each do |restaurant| %>
+        <div class="col-12 col-lg-4">
+          <div class="card my-3">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+            <div class="card-header"><%= restaurant.name %></div>
+            <div class="card-body">
+              <p class="card-text"><%= restaurant.address %></p>
+              <%= link_to "Learn more", restaurant_path(restaurant), class: "link" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   <%= link_to new_restaurant_path, class: "btn-elegant" do %>
     <i class="fa fa-plus"> Add new restaurant</i>
   <% end %>

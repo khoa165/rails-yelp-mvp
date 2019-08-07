@@ -6,22 +6,14 @@ h1 {
   font-size: 40px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-  font-size: 20px;
-}
-
-.container {
-  width: 600px;
-  margin: 0 auto;
+.main {
+  width: 800px;
+  margin: 30px auto;
 }
 
 .header {
@@ -51,4 +43,23 @@ li {
 .btn-elegant:hover {
   background: #00BB9C;
   color: white;
+}
+
+.review-footer {
+  opacity: 0.5;
+}
+
+.restaurant-name {
+  font-style: italic;
+}
+
+.restaurant-info {
+  padding: 10px 40px;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

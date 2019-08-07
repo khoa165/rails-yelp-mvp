@@ -1,17 +1,32 @@
-<div class="container">
+<div class="main">
   <div class="header">
-    <h1><%= @restaurant.name %></h1>
+    <h1 class="restaurant-name"><%= @restaurant.name %></h1>
     <%= link_to "Write a review", new_restaurant_review_path(@restaurant), class: "btn-elegant" %>
   </div>
-  <div>
+  <div class="restaurant-info">
     <p><%= @restaurant.address %></p>
     <p><%= @restaurant.phone_number %></p>
     <p><%= @restaurant.category.capitalize %></p>
   </div>
-  <div>
-
-  </div>
   <%= link_to restaurants_path, class: "btn-elegant" do %>
     <i class="fa fa-undo"> Return to restaurants</i>
   <% end %>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <% @reviews.each do |review| %>
+        <div class="col-12 col-lg-6">
+          <div class="card my-3">
+            <div class="card-header">Review</div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p><%= review.content %></p>
+                <p class="review-footer">&mdash; <%= review.rating %> stars &mdash;<span> from Mr. ABC</span></p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

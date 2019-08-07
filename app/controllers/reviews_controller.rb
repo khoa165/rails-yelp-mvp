@@ -23,6 +23,6 @@ class ReviewsController < ApplicationController
   end
 
   def find_restaurant
-    @restaurant = Restaurant.find(params[:id].to_i)
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 end

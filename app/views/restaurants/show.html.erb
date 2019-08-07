@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="header">
+    <h1><%= @restaurant.title %></h1>
+    <%= link_to "Edit info", edit_restaurant_path, class: "btn-elegant" %>
+  </div>
+  <div class="details">
+    <p><%= @restaurant.content %></p>
+  </div>
+  <%= link_to restaurants_path, class: "btn-elegant" do %>
+    <i class="fa fa-undo"> Return to restaurants</i>
+  <% end %>
+</div>

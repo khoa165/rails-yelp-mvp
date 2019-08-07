@@ -33,6 +33,12 @@ li {
   color: red;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .btn-elegant {
   display: inline-block;
   color: #00BB9C;
